@@ -34,30 +34,30 @@ stages:
       nfiles: 15
     params:
       params.yaml:
-        data.test_size: 0.25
+        data.test_size: 0.22
         project.random_state: 5
         project.target_col: Price
         project.target_transform: log2
     outs:
     - path: data/processed/test.csv
       hash: md5
-      md5: 2e26341aa1d5f4e80c622b11edda1456
-      size: 32789
+      md5: 39c8dbaaec3667b0e9e6ebc1b3ea6598
+      size: 28897
     - path: data/processed/train.csv
       hash: md5
-      md5: f62d4815c0a066d02f7614cdeb1c1ab9
-      size: 97923
+      md5: be4db7958a8fab2bc080861528e62d07
+      size: 101815
   train:
     cmd: python src/models/train.py
     deps:
     - path: data/processed/test.csv
       hash: md5
-      md5: 2e26341aa1d5f4e80c622b11edda1456
-      size: 32789
+      md5: 39c8dbaaec3667b0e9e6ebc1b3ea6598
+      size: 28897
     - path: data/processed/train.csv
       hash: md5
-      md5: f62d4815c0a066d02f7614cdeb1c1ab9
-      size: 97923
+      md5: be4db7958a8fab2bc080861528e62d07
+      size: 101815
     - path: src/models/train.py
       hash: md5
       md5: fc5af39fe892315fa864272b2aabcd45
@@ -86,8 +86,8 @@ stages:
             min_samples_split: 17
             max_features:
         preprocessor:
-          rare_category_threshold: 10
-          iqr_multiplier: 1.5
+          rare_category_threshold: 19
+          iqr_multiplier: 1.6
           display_categories:
           - HD
           - Full HD
@@ -122,18 +122,18 @@ stages:
     outs:
     - path: reports/train_metrics.json
       hash: md5
-      md5: 850d3833be97c869dc3e9a09b107b6f9
+      md5: 08af649b7bf09ba50fdb1dce5fb039f8
       size: 219
   evaluate:
     cmd: python src/models/evaluate.py
     deps:
     - path: data/processed/test.csv
       hash: md5
-      md5: 2e26341aa1d5f4e80c622b11edda1456
-      size: 32789
+      md5: 39c8dbaaec3667b0e9e6ebc1b3ea6598
+      size: 28897
     - path: reports/train_metrics.json
       hash: md5
-      md5: 850d3833be97c869dc3e9a09b107b6f9
+      md5: 08af649b7bf09ba50fdb1dce5fb039f8
       size: 219
     - path: src/models/evaluate.py
       hash: md5
@@ -157,5 +157,5 @@ stages:
     outs:
     - path: reports/evaluation_report.json
       hash: md5
-      md5: d3f10048ae0511b099db145b7f6e53d4
+      md5: 09e76c0e6233b43555e63aa8d0c51dec
       size: 583
