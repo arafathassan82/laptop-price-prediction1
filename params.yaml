@@ -6,7 +6,7 @@
 
 project:
   name: laptop-price-prediction1
-  random_state: 5
+  random_state: 3
   target_col: Price
   target_transform: log2        # applied before training
 
@@ -15,7 +15,7 @@ data:
   processed_dir: data/processed
   train_file: data/processed/train.csv
   test_file: data/processed/test.csv
-  test_size: 0.25
+  test_size: 0.30
 
 preprocessor:
   rare_category_threshold: 10

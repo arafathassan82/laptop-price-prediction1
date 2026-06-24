@@ -1,11 +1,11 @@
 {
-  "r2_log": 0.8911,
-  "rmse_log": 0.2947,
-  "mae_log": 0.2227,
-  "r2_orig": 0.7855,
-  "rmse_orig": 18682.29,
-  "mae_orig": 10706.81,
-  "cv_r2_mean": 0.8823,
-  "cv_r2_std": 0.0113,
-  "train_time_sec": 0.594
+  "r2_log": 0.8813,
+  "rmse_log": 0.304,
+  "mae_log": 0.227,
+  "r2_orig": 0.795,
+  "rmse_orig": 18125.97,
+  "mae_orig": 10365.02,
+  "cv_r2_mean": 0.8846,
+  "cv_r2_std": 0.014,
+  "train_time_sec": 0.751
 }
