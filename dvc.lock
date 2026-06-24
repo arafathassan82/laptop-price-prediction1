@@ -9,9 +9,9 @@ stages:
       size: 2325
     - path: src/utils/
       hash: md5
-      md5: a422f3cd26d58dbb420b46aaaca4daf9.dir
-      size: 45111
-      nfiles: 15
+      md5: 990f1362ac2b2326b4242d10f0012545.dir
+      size: 45810
+      nfiles: 16
     params:
       params.yaml:
         data.raw_path: data/raw/laptop_clean_dataset.csv
@@ -29,9 +29,9 @@ stages:
       size: 2914
     - path: src/utils/
       hash: md5
-      md5: b09c225d461343018b934ed09949f0db.dir
-      size: 45111
-      nfiles: 15
+      md5: 990f1362ac2b2326b4242d10f0012545.dir
+      size: 45810
+      nfiles: 16
     params:
       params.yaml:
         data.test_size: 0.3
@@ -60,13 +60,13 @@ stages:
       size: 91481
     - path: src/models/train.py
       hash: md5
-      md5: fc5af39fe892315fa864272b2aabcd45
-      size: 7495
+      md5: a89c188b32ac9d36bbc357ede0d15345
+      size: 7629
     - path: src/utils/
       hash: md5
-      md5: 78e5280f3070b9d344d84aff5f7e56a0.dir
-      size: 45111
-      nfiles: 15
+      md5: 011691a35d0ef8c0932e9b43fca86bf3.dir
+      size: 47258
+      nfiles: 17
     params:
       params.yaml:
         mlflow:
@@ -122,7 +122,7 @@ stages:
     outs:
     - path: reports/train_metrics.json
       hash: md5
-      md5: 5d8324d59748cde80f48553cd3e1e50d
+      md5: 56b89d9e6430881cf8e002dfe2259547
       size: 215
   evaluate:
     cmd: python src/models/evaluate.py
@@ -133,7 +133,7 @@ stages:
       size: 39231
     - path: reports/train_metrics.json
       hash: md5
-      md5: 5d8324d59748cde80f48553cd3e1e50d
+      md5: 56b89d9e6430881cf8e002dfe2259547
       size: 215
     - path: src/models/evaluate.py
       hash: md5
@@ -141,9 +141,9 @@ stages:
       size: 4951
     - path: src/utils/
       hash: md5
-      md5: 78e5280f3070b9d344d84aff5f7e56a0.dir
-      size: 45111
-      nfiles: 15
+      md5: 011691a35d0ef8c0932e9b43fca86bf3.dir
+      size: 47258
+      nfiles: 17
     params:
       params.yaml:
         evaluate.min_r2_threshold: 0.85
@@ -157,5 +157,5 @@ stages:
     outs:
     - path: reports/evaluation_report.json
       hash: md5
-      md5: e881e7cd93c078e5c9ff682f21107a59
+      md5: 7b84a47d44926022df0489e1354edc95
       size: 580

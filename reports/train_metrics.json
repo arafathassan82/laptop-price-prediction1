@@ -7,5 +7,5 @@
   "mae_orig": 10365.02,
   "cv_r2_mean": 0.8846,
   "cv_r2_std": 0.014,
-  "train_time_sec": 0.751
+  "train_time_sec": 0.619
 }

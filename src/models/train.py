@@ -32,6 +32,8 @@ from src.utils.config       import (get_data_cfg, get_project_cfg,
 from src.features.preprocessed import build_preprocessor
 from src.utils.mlflow_utils import init_mlflow
 
+from src.utils.saveInfoModel import save_model_info
+
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -158,6 +160,8 @@ def run():
             serialization_format="cloudpickle") 
         logger.success(f"Successfully save the model artifact")
         logger.success(f"MLflow run logged  →  {run.info.run_id}")
+        
+        save_model_info(run_id, "model", 'reports/model_info.json')
 
     # ── save metrics JSON for DVC ─────────────────────────────────────
     metrics_path = reports / "train_metrics.json"
